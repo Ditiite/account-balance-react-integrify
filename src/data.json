@@ -1,0 +1,26 @@
+{
+    "initialBalance": 0,
+    "transactions": [
+        {
+            "description": "Salary", 
+            "amount": 3500,
+            "date": "13/6/2018",
+            "time": "9:30",
+            "type": "income"
+        },
+        {
+            "description": "Bonus", 
+            "amount": 500,
+            "date": "13/6/2018",
+            "time": "9:35",
+            "type": "income"
+        },
+        {
+            "description": "Transportation",
+            "amount": 200,
+            "date": "13/6/2018",
+            "time": "10:30",
+            "type": "expense"
+        }
+    ]
+}

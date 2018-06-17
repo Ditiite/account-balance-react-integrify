@@ -1,0 +1,10 @@
+.report {
+    border: 1px solid silver;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "income expenses"
+        "balance balance";
+    grid-gap: 10px;
+}
