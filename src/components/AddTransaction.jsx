@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import './AddTransaction.css'
+
 
 class AddTransaction extends Component {
 
@@ -59,6 +61,7 @@ class AddTransaction extends Component {
         return(
             <form onSubmit={this.handleSubmit}>
                 <input
+                    className="description"
                     type="text"
                     name="description"
                     placeholder="Description"
@@ -66,6 +69,7 @@ class AddTransaction extends Component {
                     onChange={this.handleChange}  
                     />
                 <input
+                    className="amount"
                     type="number"
                     name="amount"
                     placeholder="Amount"
@@ -79,7 +83,7 @@ class AddTransaction extends Component {
                     <option value="income">Income</option>
                     <option value="expense" >Expense</option>
                 </select>
-                <button>Add</button>
+                <button className="add-btn">Add</button>
             </form>
         )
     }

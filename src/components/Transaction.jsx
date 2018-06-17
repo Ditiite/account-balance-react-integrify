@@ -13,7 +13,7 @@ class Transaction extends Component {
                     { 
                         this.props.transactionList.map((item, idx) => {
                             return (
-                                <li key={idx}>
+                                <li key={idx} className="transaction-cotainer">
                                     <p>{item.description}</p>
                                     <p>{item.amount} €</p>
                                     <p>{item.date}</p>

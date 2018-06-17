@@ -6,5 +6,15 @@
     grid-template-areas: 
         "income expenses"
         "balance balance";
-    grid-gap: 10px;
+    grid-gap: 30px;
+}
+
+.summary {
+    grid-area: balance;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px solid silver;
+    padding: 20px
 }

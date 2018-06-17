@@ -1,0 +1,44 @@
+form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr, 2fr, 2fr, 1fr;
+    grid-template-areas: 
+        "description amount select btn";
+    grid-gap: 20px;
+    margin: 10px 0;
+}
+
+input,
+input::placeholder,
+select,
+option,
+.add-btn {
+    padding: 10px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 18px;
+    text-align: center;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.description {
+    grid-area: description;
+}
+
+.amount {
+    grid-area: amount;
+}
+
+select {
+    grid-area: select;
+}
+
+.add-btn {
+    box-shadow: var(--box-shadow);
+    grid-area: btn;
+    border-radius: 5px;
+}
+
