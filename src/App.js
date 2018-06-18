@@ -7,7 +7,6 @@ import AddTransaction from "./components/AddTransaction.jsx";
 import { transactions, initialBalance } from './data.json';
 
 class App extends Component {
-    foo = 'bar';
 
     constructor(props) {
         super(props);
@@ -35,6 +34,5 @@ class App extends Component {
         )
     }
 };
-
 
 export default App;

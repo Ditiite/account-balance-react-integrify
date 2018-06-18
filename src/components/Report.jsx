@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Report.css';
 import Transaction from './Transaction';
 import Summary from './Summary'
+import PropTypes from 'prop-types';
 
 import { calculateTotal, splitIncomeAndExpense } from '../services/account';
 
@@ -25,4 +26,7 @@ class Report extends Component {
     }
 }
 
+Report.propTypes = {
+    initialBalance: PropTypes.number.isRequired
+}
 export default Report;

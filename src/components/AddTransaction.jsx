@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './AddTransaction.css'
 
+import './AddTransaction.css';
 
 class AddTransaction extends Component {
 
@@ -13,6 +13,7 @@ class AddTransaction extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.getYear = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
@@ -29,8 +30,8 @@ class AddTransaction extends Component {
             description: this.state.description,
             
             amount: parseFloat(this.state.amount, 10),
-            date: '13/6/2018',
-            time: '10:30',
+            date: this.getDate(),
+            time: this.getTime(),
             type: this.state.type 
         });
     }
@@ -57,6 +58,25 @@ class AddTransaction extends Component {
         } 
     }
 
+    getDate(){
+        let date = new Date;
+
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        let year = date.getFullYear();
+
+        let currentDate = `${month}-${day}-${year}`;
+        return currentDate;
+    }
+
+    getTime() {
+        let time = new Date();
+        let hours = time.getHours();
+        let minute = time.getMinutes();
+        let currentTime = `${hours}:${minute}`;
+        return currentTime;
+    }
+
     render() {
         return(
             <form onSubmit={this.handleSubmit}>
@@ -66,7 +86,8 @@ class AddTransaction extends Component {
                     name="description"
                     placeholder="Description"
                     value={this.state.description}
-                    onChange={this.handleChange}  
+                    onChange={this.handleChange}
+                    required  
                     />
                 <input
                     className="amount"
@@ -74,7 +95,8 @@ class AddTransaction extends Component {
                     name="amount"
                     placeholder="Amount"
                     value={this.state.amount}  
-                    onChange={this.handleChange}  
+                    onChange={this.handleChange} 
+                    required 
                     />
                 <select 
                     value={this.state.type}
@@ -88,7 +110,5 @@ class AddTransaction extends Component {
         )
     }
 }
-
-
 
 export default AddTransaction;
