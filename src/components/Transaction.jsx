@@ -7,7 +7,7 @@ class Transaction extends Component {
     render() {
 
         return(
-            <div className="transaction-container">
+            <div className="">
                 <h2>{this.props.title}</h2>
                 <ul>
                     { 

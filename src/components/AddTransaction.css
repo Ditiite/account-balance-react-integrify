@@ -41,3 +41,13 @@ select {
     border-radius: 5px;
 }
 
+@media screen and (max-width: 800px) {
+    form {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "description"
+            "amount" 
+            "select" 
+            "btn";
+    }
+}

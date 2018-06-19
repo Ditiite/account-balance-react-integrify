@@ -97,6 +97,7 @@ class AddTransaction extends Component {
                     value={this.state.amount}  
                     onChange={this.handleChange} 
                     required 
+                    min="1"
                     />
                 <select 
                     value={this.state.type}
