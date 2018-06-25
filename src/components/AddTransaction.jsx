@@ -44,6 +44,7 @@ class AddTransaction extends Component {
                 this.setState({
                     description: target.value
                 });
+                console.log(this.description);
                 break;
             case 'amount': 
                 this.setState({
