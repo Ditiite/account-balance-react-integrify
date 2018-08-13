@@ -56,11 +56,13 @@ class AddTransaction extends Component {
                     type: target.value
                 });
                 break;
+            default:
+                return;
         } 
     }
 
     getDate(){
-        let date = new Date;
+        let date = new Date();
 
         let month = date.getMonth() + 1;
         let day = date.getDate();
